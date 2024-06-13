@@ -1,9 +1,8 @@
-<h1>Dogs#edit</h1>
-<p>Find me in app/views/dogs/edit.html.erb</p>
 
 <div class="container m-1 pb-2 d-flex flex-column align-items-center">
 <h1 class="mb-4">Editer le profil de votre chien</h1>
 <%= simple_form_for @dog do |f| %>
+
 <div class="d-flex justify-content-center">
   <%= f.input :name, input_html: { style: 'width: 300px;' } %>
   </div>
