@@ -35,6 +35,11 @@ class DogsController < ApplicationController
   def update
     @dog = Dog.find(params[:id])
     @dog.update(dog_params)
+    if @dog.save
+      redirect_to dog_path(@dog), notice: "Le chien a été édité avec succès."
+    else
+      render 'dogs/new', status: :unprocessable_entity
+    end
   end
 
   def destroy
